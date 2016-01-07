@@ -2,3 +2,4 @@ node_modules
 .tmp
 .sass_cache
 builds/**/images/*
+.idea/
