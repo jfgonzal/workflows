@@ -3,3 +3,4 @@ node_modules
 .sass_cache
 builds/**/images/*
 .idea/
+.idea/workspace.xml
