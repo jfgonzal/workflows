@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     concat = require('gulp-concat');
 
-var coffeeSources = ['components/coffe/tagline.coffee'];
+var coffeeSources = ['components/coffee/tagline.coffee'];
 var jsSources = [
     'components/scripts/rclick.js',
     'components/scripts/pixgrid.js',
@@ -40,4 +40,12 @@ gulp.task('compass', function(){
         })
         .on('error', gutil.log))
         .pipe(gulp.dest('builds/development/css'))
+});
+
+gulp.task('default', ['coffee','js','compass']);
+
+gulp.task('watch', function(){
+   gulp.watch(coffeeSources, ['coffee']);
+   gulp.watch(jsSources, ['js']);
+   gulp.watch('components/sass/*.scss', ['compass']);
 });
