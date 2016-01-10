@@ -58,4 +58,4 @@ gulp.task('connect', function(){
     });
 });
 
-gulp.task('default', ['coffee','js','compass', 'watch']);
+gulp.task('default', ['coffee','js','compass', 'connect', 'watch']);
