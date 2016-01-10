@@ -7,6 +7,8 @@ var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
     connect = require('gulp-connect'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
     concat = require('gulp-concat');
 
 var env,
@@ -52,6 +54,7 @@ gulp.task('js', function(){
    gulp.src(jsSources)
        .pipe(concat('script.js'))
        .pipe(browserify({insertGlobals : true}))
+       .pipe(gulpif(env != 'development', uglify()))
        .pipe(gulp.dest(outputDir +'js'))
        .pipe(connect.reload())
 });
