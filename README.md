@@ -9,9 +9,9 @@ gulp
 
 ## Features
 
-Compiles coffeescript to js__
-Compoles sass to css.__
-Merges all js files to one.__
-Merges all css files to one.__
-Minifies html, css, js, and images.__
-Allows for the use of compass and browserify.__
+Compiles coffeescript to js<br />
+Compoles sass to css.<br />
+Merges all js files to one.<br />
+Merges all css files to one.<br />
+Minifies html, css, js, and images.<br />
+Allows for the use of compass and browserify.
